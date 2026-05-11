@@ -1,0 +1,24 @@
+{
+  "countries": {
+    "GB": { "status": "available" },
+    "AU": { "status": "available" },
+    "US": { "status": "coming-soon" },
+    "IE": { "status": "coming-soon" },
+    "NZ": { "status": "coming-soon" },
+    "CA": { "status": "coming-soon" }
+  },
+  "stats": {
+    "hospitals": 63,
+    "practices": 402,
+    "staff": 170780,
+    "populationReach": 13846900
+  },
+  "partners": [
+    { "name": "NHS Manchester University Foundation Trust", "logo": "/partners/partner-1.png" },
+    { "name": "Oran Park Medical", "logo": "/partners/partner-2.png" },
+    { "name": "Golborne Medical", "logo": "/partners/partner-3.png" },
+    { "name": "Kearns Medical Centre", "logo": "/partners/partner-4.png" },
+    { "name": "Sunshine Coast Health", "logo": "/partners/partner-5.png" },
+    { "name": "Greenfield Medical Centre", "logo": "/partners/partner-6.png" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "partners": [
+    { "name": "NHS England", "logo": "/partners/nhs-england.svg" },
+    { "name": "NHS Scotland", "logo": "/partners/nhs-scotland.svg" },
+    { "name": "NHS Wales", "logo": "/partners/nhs-wales.svg" },
+    { "name": "Health Service Executive", "logo": "/partners/hse.svg" },
+    { "name": "Australian Health", "logo": "/partners/australian-health.svg" },
+    { "name": "Bupa", "logo": "/partners/bupa.svg" }
+  ]
+}

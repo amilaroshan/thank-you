@@ -1,0 +1,46 @@
+{
+  "charities": [
+    {
+      "id": "charity-001",
+      "name": "NHS Charities Together",
+      "logo": "/charities/nhs-charities-together.svg",
+      "bgColor": "#005EB8",
+      "url": "https://www.nhscharitiestogether.co.uk"
+    },
+    {
+      "id": "charity-002",
+      "name": "IPA World Health",
+      "logo": "/charities/ipa-world-health.svg",
+      "bgColor": "#FFFFFF",
+      "url": "https://www.ipaworld.org"
+    },
+    {
+      "id": "charity-003",
+      "name": "Marie Curie",
+      "logo": "/charities/marie-curie.svg",
+      "bgColor": "#FFD700",
+      "url": "https://www.mariecurie.org.uk"
+    },
+    {
+      "id": "charity-004",
+      "name": "Macmillan Cancer Support",
+      "logo": "/charities/macmillan.svg",
+      "bgColor": "#00B140",
+      "url": "https://www.macmillan.org.uk"
+    },
+    {
+      "id": "charity-005",
+      "name": "British Red Cross",
+      "logo": "/charities/british-red-cross.svg",
+      "bgColor": "#FFFFFF",
+      "url": "https://www.redcross.org.uk"
+    },
+    {
+      "id": "charity-006",
+      "name": "Médecins Sans Frontières",
+      "logo": "/charities/msf.svg",
+      "bgColor": "#FFFFFF",
+      "url": "https://www.msf.org"
+    }
+  ]
+}

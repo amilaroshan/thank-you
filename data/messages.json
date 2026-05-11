@@ -1,0 +1,76 @@
+{
+  "messages": [
+    {
+      "id": "msg-001",
+      "recipientRole": "Nurse",
+      "hospitalName": "Royal Victoria Hospital",
+      "city": "Belfast",
+      "body": "You held my hand when I was scared and made me feel like a person, not just a patient. Thank you from the bottom of my heart.",
+      "fromLabel": "From a Patient",
+      "createdAt": "2026-05-06T14:32:00Z"
+    },
+    {
+      "id": "msg-002",
+      "recipientRole": "Doctor",
+      "hospitalName": "St Thomas' Hospital",
+      "city": "London",
+      "body": "Your calm reassurance during my diagnosis meant everything. You explained everything clearly and treated me with such dignity.",
+      "fromLabel": "From a Family Member",
+      "createdAt": "2026-05-05T09:15:00Z"
+    },
+    {
+      "id": "msg-003",
+      "recipientRole": "Healthcare Assistant",
+      "hospitalName": "Manchester Royal Infirmary",
+      "city": "Manchester",
+      "body": "Every morning you greeted me with a smile. Your kindness made the long stay so much more bearable. I will never forget your warmth.",
+      "fromLabel": "From a Patient",
+      "createdAt": "2026-05-04T11:45:00Z"
+    },
+    {
+      "id": "msg-004",
+      "recipientRole": "Nurse",
+      "hospitalName": "Royal Melbourne Hospital",
+      "city": "Melbourne",
+      "body": "Through the hardest night of our lives you were there. Professional, compassionate, and genuinely caring. Our whole family thanks you.",
+      "fromLabel": "From a Family Member",
+      "createdAt": "2026-05-03T20:10:00Z"
+    },
+    {
+      "id": "msg-005",
+      "recipientRole": "Pharmacist",
+      "hospitalName": "Western General Hospital",
+      "city": "Edinburgh",
+      "body": "You spotted a potential drug interaction that no one else had flagged. You may have saved my life. I cannot thank you enough.",
+      "fromLabel": "From a Patient",
+      "createdAt": "2026-05-02T16:55:00Z"
+    },
+    {
+      "id": "msg-006",
+      "recipientRole": "Porter",
+      "hospitalName": "Leeds General Infirmary",
+      "city": "Leeds",
+      "body": "You always arrived with a joke and a kind word. Those short trips through the corridors were moments of light in a difficult time.",
+      "fromLabel": "From a Patient",
+      "createdAt": "2026-05-01T08:30:00Z"
+    },
+    {
+      "id": "msg-007",
+      "recipientRole": "Receptionist",
+      "hospitalName": "Mater Hospital",
+      "city": "Dublin",
+      "body": "When I arrived panicked and confused, you took the time to calm me down and guide me exactly where I needed to go. Thank you.",
+      "fromLabel": "From a Patient",
+      "createdAt": "2026-04-30T13:20:00Z"
+    },
+    {
+      "id": "msg-008",
+      "recipientRole": "Cleaner",
+      "hospitalName": "Royal Brisbane Hospital",
+      "city": "Brisbane",
+      "body": "You worked tirelessly and silently. A spotless environment matters so much to recovery. Your work truly makes a difference.",
+      "fromLabel": "From a Patient",
+      "createdAt": "2026-04-29T10:05:00Z"
+    }
+  ]
+}
