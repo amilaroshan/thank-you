@@ -8,7 +8,7 @@ export function MessageCard({ message }: Props) {
 
   return (
     <article
-      className="relative flex flex-col rounded-[6px] border bg-white px-6 py-4 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.05)]"
+      className="relative flex flex-col rounded-[6px] border bg-white px-4 py-3 sm:px-6 sm:py-4 shadow-[0px_4px_4px_0px_rgba(0,0,0,0.05)]"
       style={{ borderColor: "#ddd" }}
     >
       {/* Header: avatar + title/city + timestamp */}
@@ -33,7 +33,7 @@ export function MessageCard({ message }: Props) {
           <div>
             <p
               className="font-bold leading-tight"
-              style={{ fontSize: "14", color: "#091f48" }}
+              style={{ fontSize: "14px", color: "#091f48" }}
             >
               To a {message.recipientRole} at {message.hospitalName},
             </p>
@@ -63,8 +63,8 @@ export function MessageCard({ message }: Props) {
           className="shrink-0 mt-1 h-fit"
         /> */}
         <p
-          className="text-[#484747]"
-          style={{ fontSize: "16px", lineHeight: "24px" }}
+          className="text-[#484747] text-sm sm:text-[16px]"
+          style={{ lineHeight: "24px" }}
         >
           {message.body}
         </p>
@@ -73,7 +73,7 @@ export function MessageCard({ message }: Props) {
       {/* From label */}
       <p
         className="mt-4 text-right font-semibold"
-        style={{ fontSize: "14", color: "#091f48" }}
+        style={{ fontSize: "14px", color: "#091f48" }}
       >
         – {message.fromLabel}
       </p>

@@ -17,7 +17,7 @@ export function Header() {
       className="sticky top-0 z-50 bg-white border-b"
       style={{ borderColor: "#dfdede" }}
     >
-      <div className="mx-auto flex h-[64px] max-w-[1440px] items-center justify-between px-[120px]">
+      <div className="mx-auto flex h-[64px] max-w-[1440px] items-center justify-between px-4 sm:px-8 lg:px-[120px]">
         {/* Logo */}
         <Link
           href="/"

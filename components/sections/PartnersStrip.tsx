@@ -20,7 +20,7 @@ export function PartnersStrip() {
               alt={alt}
               width={196}
               height={80}
-              className="h-[64px] w-auto object-contain"
+              className="h-[44px] sm:h-[64px] w-auto object-contain"
             />
           </li>
         ))}

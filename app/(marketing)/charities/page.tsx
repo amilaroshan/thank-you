@@ -64,13 +64,13 @@ export default function CharitiesPage() {
       {/* Charity grid */}
       <section aria-label="Partner charities" className="py-10 px-4">
         <div className="mx-auto max-w-[1200px]">
-          <div className="grid grid-cols-1 gap-[26px] sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-[26px] lg:grid-cols-3">
             {charities.map((charity) => (
               <div
                 key={charity.name}
                 className="relative overflow-hidden rounded-[6px]"
                 style={{
-                  height: "268px",
+                  height: "220px",
                   backgroundColor: charity.bg ?? undefined,
                   border: charity.border ? `1px solid ${charity.border}` : "none",
                 }}

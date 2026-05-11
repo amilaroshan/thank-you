@@ -8,7 +8,7 @@ import type { Feature, Geometry } from "geojson";
 import type { CountryStatus } from "@/lib/types";
 
 const GEO_URL = "/maps/world-110m.json";
-const WIDTH = 800;
+const WIDTH = 900;
 const HEIGHT = 420;
 
 /* ISO 3166-1 numeric → { alpha2, name } */
@@ -209,7 +209,7 @@ export function WorldMap({ countryStatuses }: Props) {
 
   return (
     <div className="w-full" ref={containerRef}>
-      <div className="relative mx-auto max-w-[789px]">
+      <div className="relative mx-auto max-w-fit">
         <svg
           width={WIDTH}
           height={HEIGHT}
@@ -285,7 +285,7 @@ export function WorldMap({ countryStatuses }: Props) {
       </div>
 
       {/* Legend — exact from Figma */}
-      <div className="mt-4 flex items-center gap-6 justify-start pl-2">
+      <div className="flex items-center gap-3 sm:gap-6 justify-start pl-2 absolute">
         <div className="flex items-center gap-2">
           <span
             className="inline-block h-[16px] w-[16px] rounded-full"

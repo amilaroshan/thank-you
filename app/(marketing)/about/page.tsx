@@ -23,20 +23,20 @@ export default function AboutPage() {
         className="py-12 px-4"
       >
         <div
-          className="mx-auto flex flex-col lg:flex-row"
-          style={{ maxWidth: "1200px", gap: "92px" }}
+          className="mx-auto flex flex-col lg:flex-row gap-10 lg:gap-[92px]"
+          style={{ maxWidth: "1200px" }}
         >
           {/* Left: Our Story */}
           <div className="flex-1 min-w-0">
             <h2
-              className="font-semibold"
-              style={{ fontSize: "24px", lineHeight: "20px", color: "#000" }}
+              className="font-semibold text-[20px] sm:text-[24px]"
+              style={{ lineHeight: "28px", color: "#000" }}
             >
               Our Story
             </h2>
             <div
-              className="mt-6 space-y-4 font-normal"
-              style={{ fontSize: "16px", lineHeight: "22px", color: "#000" }}
+              className="mt-6 space-y-4 font-normal text-sm sm:text-[16px]"
+              style={{ lineHeight: "22px", color: "#000" }}
             >
               <p>
                 ShareGratitude was born from the extraordinary acts of care witnessed during the
@@ -65,19 +65,16 @@ export default function AboutPage() {
           </div>
 
           {/* Right: Our Raison-D'être */}
-          <div
-            className="shrink-0 flex flex-col items-end text-right"
-            style={{ width: "545px" }}
-          >
+          <div className="w-full lg:w-[545px] lg:shrink-0 flex flex-col items-start lg:items-end text-left lg:text-right">
             <h2
-              className="font-semibold"
-              style={{ fontSize: "24px", lineHeight: "20px", color: "#000" }}
+              className="font-semibold text-[20px] sm:text-[24px]"
+              style={{ lineHeight: "28px", color: "#000" }}
             >
               Our Raison-D&apos;être
             </h2>
             <div
-              className="mt-6 space-y-4 font-normal"
-              style={{ fontSize: "16px", lineHeight: "22px", color: "#000" }}
+              className="mt-6 space-y-4 font-normal text-sm sm:text-[16px]"
+              style={{ lineHeight: "22px", color: "#000" }}
             >
               <p>
                 We believe that when staff feel valued, they thrive, and when staff thrive, care and
@@ -87,8 +84,8 @@ export default function AboutPage() {
               <p>This remains at the core of everything we do.</p>
             </div>
             <p
-              className="mt-6 font-semibold"
-              style={{ fontSize: "16px", lineHeight: "22px", color: "#000" }}
+              className="mt-6 font-semibold text-sm sm:text-[16px]"
+              style={{ lineHeight: "22px", color: "#000" }}
             >
               Dr Janindra Warusavitarne &amp; Don Amal Francis
             </p>
@@ -98,7 +95,7 @@ export default function AboutPage() {
                 alt="Signatures of Dr Janindra Warusavitarne and Don Amal Francis"
                 width={314}
                 height={76}
-                className="h-auto"
+                className="h-auto max-w-full"
               />
             </div>
           </div>

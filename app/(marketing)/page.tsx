@@ -20,8 +20,7 @@ export default async function HomePage() {
       {/* Hero */}
       <section
         aria-label="Hero"
-        className="relative overflow-hidden"
-        style={{ height: "120px" }}
+        className="relative overflow-hidden py-6 sm:py-0 sm:h-[120px]"
       >
         <Image
           src="/images/home-hero-bg.png"
@@ -37,12 +36,12 @@ export default async function HomePage() {
         />
         <div className="relative flex h-full flex-col items-center justify-center text-center px-4 gap-1">
           <h1
-            className="font-bold tracking-[-0.96px]"
-            style={{ fontSize: "26px", color: "#091f48" }}
+            className="font-bold tracking-[-0.96px] text-[18px] sm:text-[22px] lg:text-[26px]"
+            style={{ color: "#091f48" }}
           >
             We ensure your appreciation reaches the people who cared for you
           </h1>
-          <p style={{ fontSize: "16px", lineHeight: "20px", color: "#091f48" }}>
+          <p className="text-sm sm:text-[16px]" style={{ lineHeight: "20px", color: "#091f48" }}>
             <span className="font-semibold">
               Real thank-you messages delivered directly to healthcare staff :{" "}
             </span>
@@ -51,21 +50,21 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Community messages — sticks at header, only right column scrolls */}
+      {/* Community messages — desktop: sticky sidebar + scrollable feed; mobile: stacked */}
       <section
         aria-label="Community messages"
-        className="sticky overflow-hidden px-4"
-        style={{ top: "98px", height: "calc(100vh - 98px)" }}
+        className="overflow-hidden px-4 lg:sticky lg:h-[calc(100vh-98px)]"
+        style={{ top: "98px" }}
       >
         <div
-          className="mx-auto flex h-full gap-[13px] py-4"
+          className="mx-auto flex flex-col gap-3 py-4 lg:flex-row lg:h-full lg:gap-[13px]"
           style={{ maxWidth: "1199px" }}
         >
-          {/* Left sidebar: nurse photo + callout card */}
-          <div className="flex shrink-0 flex-col gap-3" style={{ width: "328px" }}>
-            {/* Nurse photo */}
+          {/* Left sidebar */}
+          <div className="flex flex-col gap-3 lg:shrink-0 lg:w-[328px]">
+            {/* Nurse photo — desktop only */}
             <div
-              className="relative overflow-hidden rounded-[6px]"
+              className="hidden lg:block relative overflow-hidden rounded-[6px]"
               style={{ height: "354px" }}
             >
               <Image
@@ -79,7 +78,7 @@ export default async function HomePage() {
             {/* Teal callout card */}
             <div
               className="relative flex flex-col items-center justify-center overflow-hidden rounded-[9px] px-6 pb-6 pt-6 text-center"
-              style={{ backgroundColor: "#00CCCC", height: "174px" }}
+              style={{ backgroundColor: "#00CCCC" }}
             >
               <Image
                 src="/images/heart-pin-vector.svg"
@@ -89,20 +88,20 @@ export default async function HomePage() {
                 className="mb-3"
               />
               <p
-                className="font-bold tracking-[-0.4px] leading-6"
-                style={{ fontSize: "20px", color: "#091f48" }}
+                className="font-bold tracking-[-0.4px] leading-6 text-[18px] sm:text-[20px]"
+                style={{ color: "#091f48" }}
               >
                 Have someone to thank?
               </p>
               <p
-                className="mt-1"
-                style={{ fontSize: "14px", lineHeight: "20px", color: "#091f48" }}
+                className="mt-1 text-sm sm:text-[14px]"
+                style={{ lineHeight: "20px", color: "#091f48" }}
               >
                 It takes less than 2 minutes.
               </p>
               <Link
                 href="/say-thank-you"
-                className="mt-3 inline-flex h-[40px] w-[279px] items-center justify-center rounded-[6px] bg-white font-semibold transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-white"
+                className="mt-3 inline-flex h-[40px] w-full lg:w-[279px] items-center justify-center rounded-[6px] bg-white font-semibold transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-white"
                 style={{ fontSize: "14px", color: "#091f48" }}
               >
                 How to say Thank You
@@ -110,8 +109,8 @@ export default async function HomePage() {
             </div>
           </div>
 
-          {/* Right: message feed — only this scrolls */}
-          <div className="flex flex-1 flex-col gap-3 overflow-y-auto pb-4">
+          {/* Right: message feed */}
+          <div className="flex flex-col gap-3 lg:flex-1 lg:overflow-y-auto pb-4">
             {messages.map((message) => (
               <MessageCard key={message.id} message={message} />
             ))}

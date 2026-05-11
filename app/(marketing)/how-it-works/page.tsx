@@ -53,29 +53,27 @@ export default function HowItWorksPage() {
         className="py-10 px-4"
       >
         <div className="mx-auto max-w-[1200px]">
-          <div className="flex flex-col items-center gap-12 sm:flex-row sm:items-start sm:justify-center sm:gap-12">
+          <div className="flex flex-col items-center gap-8 sm:flex-row sm:items-start sm:justify-center sm:gap-8 lg:gap-12">
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="flex flex-col items-center gap-2 text-center"
-                style={{ width: "239px", maxWidth: "100%" }}
+                className="flex w-full max-w-[239px] flex-col items-center gap-2 text-center"
               >
                 {/* Illustration */}
-                <div className="flex items-end justify-center" style={{ height: "141px" }}>
+                <div className="flex items-end justify-center h-[110px] sm:h-[141px]">
                   <Image
                     src={step.illustration}
                     alt={step.alt}
                     width={step.illustrationWidth}
                     height={step.illustrationHeight}
-                    className="h-auto"
+                    className="h-auto max-h-full"
                   />
                 </div>
 
                 {/* Step number */}
                 <p
-                  className="font-normal mt-2"
+                  className="font-normal mt-2 text-[32px] sm:text-[45px]"
                   style={{
-                    fontSize: "45.684px",
                     color: "#00CCCC",
                     letterSpacing: "-2.2842px",
                     lineHeight: 1,
@@ -86,16 +84,16 @@ export default function HowItWorksPage() {
 
                 {/* Title */}
                 <p
-                  className="font-semibold"
-                  style={{ fontSize: "16px", color: "#091f48" }}
+                  className="font-semibold text-sm sm:text-[16px]"
+                  style={{ color: "#091f48" }}
                 >
                   {step.title}
                 </p>
 
                 {/* Description */}
                 <p
-                  className="font-normal"
-                  style={{ fontSize: "14px", color: "#091f48" }}
+                  className="font-normal text-xs sm:text-[14px]"
+                  style={{ color: "#091f48" }}
                 >
                   {step.description}
                 </p>

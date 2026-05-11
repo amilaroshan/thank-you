@@ -10,8 +10,7 @@ export function PageHero({ title, subtitle, bgImage = "/images/hero-bg.jpg" }: P
   return (
     <section
       aria-label="Page hero"
-      className="relative overflow-hidden"
-      style={{ height: "100px" }}
+      className="relative overflow-hidden py-8 sm:py-0 sm:h-[120px]"
     >
       {/* Background hospital photo */}
       <Image
@@ -31,14 +30,14 @@ export function PageHero({ title, subtitle, bgImage = "/images/hero-bg.jpg" }: P
       {/* Content */}
       <div className="relative flex h-full flex-col items-center justify-center text-center px-4">
         <h1
-          className="font-bold tracking-[-0.96px]"
-          style={{ fontSize: "32px", color: "#091f48" }}
+          className="font-bold tracking-[-0.96px] text-[22px] sm:text-[32px]"
+          style={{ color: "#091f48" }}
         >
           {title}
         </h1>
         <p
-          className="mt-1 font-semibold max-w-[672px]"
-          style={{ fontSize: "16px", lineHeight: "20px", color: "#091f48" }}
+          className="mt-1 font-semibold max-w-[672px] text-sm sm:text-[16px]"
+          style={{ lineHeight: "20px", color: "#091f48" }}
         >
           {subtitle}
         </p>
