@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Mercator } from "@visx/geo";
+import { geoMercator, geoPath } from "d3-geo";
 import { feature } from "topojson-client";
 import type { Topology, GeometryCollection } from "topojson-specification";
 import type { Feature, Geometry } from "geojson";
@@ -146,15 +146,15 @@ const COUNTRY_DATA: Record<string, { alpha2: string; name: string }> = {
 
 /* Exact colours from Figma legend */
 const FILL = {
-  available:    "#00CCCC",
+  available:     "#00CCCC",
   "coming-soon": "#99EBEB",
-  default:      "#091f48",
+  default:       "#091f48",
 } as const;
 
 const HOVER_FILL = {
-  available:    "#00A6A6",
+  available:     "#00A6A6",
   "coming-soon": "#77DEDE",
-  default:      "#1a3a6b",
+  default:       "#1a3a6b",
 } as const;
 
 type TooltipState = {
@@ -170,9 +170,12 @@ type Props = {
 
 type WorldTopology = Topology<{ countries: GeometryCollection }>;
 
+const projection = geoMercator().scale(147).center([10, 20]).translate([WIDTH / 2, HEIGHT / 2]);
+const pathGenerator = geoPath(projection);
+
 export function WorldMap({ countryStatuses }: Props) {
   const [topology, setTopology] = useState<WorldTopology | null>(null);
-  const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const [hoveredKey, setHoveredKey] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<TooltipState>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -210,72 +213,58 @@ export function WorldMap({ countryStatuses }: Props) {
         <svg
           width={WIDTH}
           height={HEIGHT}
+          viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
           className="w-full h-auto"
           role="img"
           aria-label="World map showing ShareGratitude availability by country"
         >
-          <Mercator
-            data={countries}
-            scale={147}
-            translate={[WIDTH / 2, HEIGHT / 2]}
-            center={[10, 20]}
-          >
-            {({ features }) =>
-              features.map(({ feature: geo, path }, index) => {
-                const id = geo.id != null ? String(geo.id) : null;
-                const key = id ?? `no-id-${index}`;
-                const info = id ? COUNTRY_DATA[id] : undefined;
-                const status = id ? statusByNumeric[id] : undefined;
-                const countryName = info?.name ?? geo.properties?.name ?? "Country";
-                const isHovered = hoveredId === key;
-                const fill = isHovered
-                  ? HOVER_FILL[status ?? "default"]
-                  : FILL[status ?? "default"];
+          {countries.map((geo, index) => {
+            const id = geo.id != null ? String(geo.id) : null;
+            const key = id ?? `no-id-${index}`;
+            const info = id ? COUNTRY_DATA[id] : undefined;
+            const status = id ? statusByNumeric[id] : undefined;
+            const countryName = info?.name ?? (geo.properties?.name as string | undefined) ?? "Country";
+            const isHovered = hoveredKey === key;
+            const fill = isHovered ? HOVER_FILL[status ?? "default"] : FILL[status ?? "default"];
+            const d = pathGenerator(geo) ?? "";
 
-                return (
-                  <path
-                    key={key}
-                    d={path ?? ""}
-                    fill={fill}
-                    stroke="#FFFFFF"
-                    strokeWidth={0.5}
-                    tabIndex={status ? 0 : -1}
-                    role="img"
-                    aria-label={`${countryName}${status ? `, ${status === "coming-soon" ? "coming soon" : "available"}` : ""}`}
-                    style={{
-                      outline: "none",
-                      cursor: status ? "pointer" : "default",
-                    }}
-                    onMouseEnter={() => setHoveredId(key)}
-                    onMouseMove={(evt) => {
-                      const rect = containerRef.current?.getBoundingClientRect();
-                      if (!rect) return;
-                      setHoveredId(key);
-                      setTooltip({
-                        x: evt.clientX - rect.left,
-                        y: evt.clientY - rect.top,
-                        name: countryName,
-                        status: status ?? null,
-                      });
-                    }}
-                    onMouseLeave={() => {
-                      setHoveredId(null);
-                      setTooltip(null);
-                    }}
-                    onFocus={(evt) => {
-                      if (!status) return;
-                      const rect = containerRef.current?.getBoundingClientRect();
-                      if (!rect) return;
-                      const target = evt.currentTarget as SVGGraphicsElement;
-                      const bbox = target.getBBox();
-                      setTooltip({ x: bbox.x + bbox.width / 2, y: bbox.y, name: countryName, status });
-                    }}
-                    onBlur={() => setTooltip(null)}
-                  />
-                );
-              })
-            }
-          </Mercator>
+            return (
+              <path
+                key={key}
+                d={d}
+                fill={fill}
+                stroke="#FFFFFF"
+                strokeWidth={0.5}
+                tabIndex={status ? 0 : -1}
+                role="img"
+                aria-label={`${countryName}${status ? `, ${status === "coming-soon" ? "coming soon" : "available"}` : ""}`}
+                style={{ outline: "none", cursor: status ? "pointer" : "default" }}
+                onMouseEnter={() => setHoveredKey(key)}
+                onMouseMove={(evt) => {
+                  const rect = containerRef.current?.getBoundingClientRect();
+                  if (!rect) return;
+                  setTooltip({
+                    x: evt.clientX - rect.left,
+                    y: evt.clientY - rect.top,
+                    name: countryName,
+                    status: status ?? null,
+                  });
+                }}
+                onMouseLeave={() => {
+                  setHoveredKey(null);
+                  setTooltip(null);
+                }}
+                onFocus={(evt) => {
+                  if (!status) return;
+                  const rect = containerRef.current?.getBoundingClientRect();
+                  if (!rect) return;
+                  const bbox = (evt.currentTarget as SVGGraphicsElement).getBBox();
+                  setTooltip({ x: bbox.x + bbox.width / 2, y: bbox.y, name: countryName, status });
+                }}
+                onBlur={() => setTooltip(null)}
+              />
+            );
+          })}
         </svg>
 
         {/* Tooltip */}
