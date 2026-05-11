@@ -1,10 +1,15 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
-import { ComposableMap, Geographies, Geography } from "react-simple-maps";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { Mercator } from "@visx/geo";
+import { feature } from "topojson-client";
+import type { Topology, GeometryCollection } from "topojson-specification";
+import type { Feature, Geometry } from "geojson";
 import type { CountryStatus } from "@/lib/types";
 
 const GEO_URL = "/maps/world-110m.json";
+const WIDTH = 800;
+const HEIGHT = 420;
 
 /* ISO 3166-1 numeric → { alpha2, name } */
 const COUNTRY_DATA: Record<string, { alpha2: string; name: string }> = {
@@ -163,9 +168,20 @@ type Props = {
   countryStatuses: Record<string, CountryStatus>;
 };
 
+type WorldTopology = Topology<{ countries: GeometryCollection }>;
+
 export function WorldMap({ countryStatuses }: Props) {
+  const [topology, setTopology] = useState<WorldTopology | null>(null);
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [tooltip, setTooltip] = useState<TooltipState>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    fetch(GEO_URL)
+      .then((r) => r.json())
+      .then(setTopology)
+      .catch(console.error);
+  }, []);
 
   const statusByNumeric = useMemo(() => {
     const map: Record<string, CountryStatus> = {};
@@ -174,6 +190,11 @@ export function WorldMap({ countryStatuses }: Props) {
     }
     return map;
   }, [countryStatuses]);
+
+  const countries = useMemo<Feature<Geometry>[]>(() => {
+    if (!topology) return [];
+    return feature(topology, topology.objects.countries).features;
+  }, [topology]);
 
   const availableNames = useMemo(
     () =>
@@ -186,45 +207,50 @@ export function WorldMap({ countryStatuses }: Props) {
   return (
     <div className="w-full" ref={containerRef}>
       <div className="relative mx-auto max-w-[789px]">
-        <ComposableMap
-          projection="geoMercator"
-          projectionConfig={{ scale: 147, center: [10, 20] }}
-          width={800}
-          height={420}
+        <svg
+          width={WIDTH}
+          height={HEIGHT}
           className="w-full h-auto"
           role="img"
           aria-label="World map showing ShareGratitude availability by country"
         >
-          <Geographies geography={GEO_URL}>
-            {({ geographies }) =>
-              geographies.map((geo) => {
-                const id = String(geo.id);
-                const info = COUNTRY_DATA[id];
-                const status = statusByNumeric[id];
-                const countryName = info?.name ?? "Country";
+          <Mercator
+            data={countries}
+            scale={147}
+            translate={[WIDTH / 2, HEIGHT / 2]}
+            center={[10, 20]}
+          >
+            {({ features }) =>
+              features.map(({ feature: geo, path }, index) => {
+                const id = geo.id != null ? String(geo.id) : null;
+                const key = id ?? `no-id-${index}`;
+                const info = id ? COUNTRY_DATA[id] : undefined;
+                const status = id ? statusByNumeric[id] : undefined;
+                const countryName = info?.name ?? geo.properties?.name ?? "Country";
+                const isHovered = hoveredId === key;
+                const fill = isHovered
+                  ? HOVER_FILL[status ?? "default"]
+                  : FILL[status ?? "default"];
 
                 return (
-                  <Geography
-                    key={geo.rsmKey}
-                    geography={geo}
-                    fill={FILL[status ?? "default"]}
+                  <path
+                    key={key}
+                    d={path ?? ""}
+                    fill={fill}
                     stroke="#FFFFFF"
                     strokeWidth={0.5}
                     tabIndex={status ? 0 : -1}
                     role="img"
                     aria-label={`${countryName}${status ? `, ${status === "coming-soon" ? "coming soon" : "available"}` : ""}`}
                     style={{
-                      default: { outline: "none" },
-                      hover: {
-                        fill: HOVER_FILL[status ?? "default"],
-                        outline: "none",
-                        cursor: status ? "pointer" : "default",
-                      },
-                      pressed: { outline: "none" },
+                      outline: "none",
+                      cursor: status ? "pointer" : "default",
                     }}
+                    onMouseEnter={() => setHoveredId(key)}
                     onMouseMove={(evt) => {
                       const rect = containerRef.current?.getBoundingClientRect();
                       if (!rect) return;
+                      setHoveredId(key);
                       setTooltip({
                         x: evt.clientX - rect.left,
                         y: evt.clientY - rect.top,
@@ -232,7 +258,10 @@ export function WorldMap({ countryStatuses }: Props) {
                         status: status ?? null,
                       });
                     }}
-                    onMouseLeave={() => setTooltip(null)}
+                    onMouseLeave={() => {
+                      setHoveredId(null);
+                      setTooltip(null);
+                    }}
                     onFocus={(evt) => {
                       if (!status) return;
                       const rect = containerRef.current?.getBoundingClientRect();
@@ -246,8 +275,8 @@ export function WorldMap({ countryStatuses }: Props) {
                 );
               })
             }
-          </Geographies>
-        </ComposableMap>
+          </Mercator>
+        </svg>
 
         {/* Tooltip */}
         {tooltip && (
