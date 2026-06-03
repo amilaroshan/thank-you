@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
 import { TypeformEmbed } from "@/components/sections/TypeformEmbed";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Contact",
   description:
     "Get in touch with the ShareGratitude team. We'd love to hear from hospitals, practices, and partners interested in bringing HUMAN by ShareGratitude to their staff.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

@@ -3,6 +3,8 @@
     "GB": { "status": "available" },
     "AU": { "status": "available" },
     "US": { "status": "coming-soon" },
+    "AE": { "status": "coming-soon" },
+    "KE": { "status": "coming-soon" },
     "NZ": { "status": "available" }
   },
   "stats": {

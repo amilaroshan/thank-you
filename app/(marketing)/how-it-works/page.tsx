@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/sections/PageHero";
 import { ThankYouCallout } from "@/components/sections/ThankYouCallout";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "How It Works | ShareGratitude",
+export const metadata = pageMetadata({
+  title: "How It Works",
   description:
     "See how easy it is to send a thank-you message to NHS and healthcare staff. No account needed. Scan a QR code, write a message, and it's delivered directly.",
-};
+  path: "/how-it-works",
+});
 
 const steps = [
   {
@@ -33,8 +34,8 @@ const steps = [
     title: "Write your message",
     description: "Simply write your message, and your words will be delivered directly to the their mobile phone in real time",
     illustration: "/images/hiw-step3.svg",
-    illustrationWidth: 141,
-    illustrationHeight: 141,
+    illustrationWidth: 125,
+    illustrationHeight: 125,
     alt: "Person on phone illustration",
   },
 ];

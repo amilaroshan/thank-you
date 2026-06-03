@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { getMessages } from "@/lib/api";
 import { MessageCard } from "@/components/sections/MessageCard";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Community Messages | ShareGratitude",
+export const metadata = pageMetadata({
+  title: "Community Messages",
   description:
     "Read thank-you messages sent by patients to the healthcare staff who cared for them. Real appreciation, delivered directly.",
-};
+  path: "/",
+});
 
 export const revalidate = 60;
 

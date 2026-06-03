@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import { getLocationData } from "@/lib/api";
 import { HeroSearch } from "@/components/sections/HeroSearch";
 import { StatsBar } from "@/components/sections/StatsBar";
 import { WorldMap } from "@/components/sections/WorldMap";
 import { PartnersStrip } from "@/components/sections/PartnersStrip";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Where We Are",
   description:
     "ShareGratitude is live in hospitals across the UK and Australia, with more countries coming soon. See where you can use our platform.",
-};
+  path: "/where-we-are",
+});
 
 export const revalidate = 3600;
 

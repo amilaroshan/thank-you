@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/sections/PageHero";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Charities | ShareGratitude",
+export const metadata = pageMetadata({
+  title: "Charities",
   description:
     "ShareGratitude partners with leading healthcare charities. Every message of gratitude helps support the people who support our healthcare heroes.",
-};
+  path: "/charities",
+});
 
 const charities = [
   {

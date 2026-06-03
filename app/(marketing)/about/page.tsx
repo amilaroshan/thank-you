@@ -1,12 +1,14 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/sections/PageHero";
+import { TeamSection } from "@/components/sections/TeamSection";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About | ShareGratitude",
+export const metadata = pageMetadata({
+  title: "About",
   description:
     "ShareGratitude was born from the extraordinary acts of care witnessed during COVID-19. Learn about our founders and our mission to make every healthcare worker feel seen.",
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
@@ -101,6 +103,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <TeamSection />
     </>
   );
 }
