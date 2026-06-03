@@ -10,46 +10,49 @@ export const metadata: Metadata = {
 
 const charities = [
   {
-    name: "NHS Charities Together",
-    logo: "/charities/charity-nhs.png",
-    bg: null,
-    border: null,
-    display: "cover" as const,
+    name: "Shrewsbury and Telford Hospital Charity",
+    logo: "/charity/1.jpg",
+    url: "https://www.justgiving.com/page/sharegratitude-sathcharity",
   },
   {
-    name: "IMA World Health",
-    logo: "/charities/charity-ima.png",
-    bg: "white",
-    border: "#bababa",
-    display: "contain" as const,
+    name: "Wishlist Charity",
+    logo: "/charity/8.png",
+    url: "https://www.wishlist.org.au/how-you-can-help/sharegratitude-donate",
   },
   {
-    name: "Marie Curie",
-    logo: "/charities/charity-mariecurie.png",
-    bg: "white",
-    border: "#c4c4c4",
-    display: "contain" as const,
+    name: "Gore & Districts Health Incorporated",
+    logo: "/charity/5.png",
+    url: "https://www.justgiving.com/campaign/gorehealthsharegratitude",
   },
   {
-    name: "Chafrity",
-    logo: "/charities/charity-chafrity.png",
-    bg: "#007045",
-    border: null,
-    display: "centered" as const,
+    name: "Hospice UK",
+    logo: "/charity/4.png",
+    url: "https://www.justgiving.com/page/sharegratitudeforhospiceuk",
   },
   {
-    name: "Red Cross",
-    logo: "/charities/charity-redcross.png",
-    bg: "white",
-    border: "#bababa",
-    display: "contain" as const,
+    name: "St Mark's Hospital Foundation",
+    logo: "/charity/3.png",
+    url: "https://www.justgiving.com/campaign/stmarkssharegratitude",
   },
   {
-    name: "Project C.U.R.E.",
-    logo: "/charities/charity-projectcure.png",
-    bg: "#c71e30",
-    border: null,
-    display: "contain" as const,
+    name: "University Hospital Coventry & Warwickshire Charity",
+    logo: "/charity/2.png",
+    url: "https://www.justgiving.com/uhcw",
+  },
+  {
+    name: "St John Ambulance",
+    logo: "/charity/9.png",
+    url: "https://www.sja.org.uk/donate/",
+  },
+  {
+    name: "Cancer Research UK",
+    logo: "/charity/6.png",
+    url: "https://www.cancerresearchuk.org/get-involved/donate",
+  },
+  {
+    name: "Charity: Water",
+    logo: "/charity/7.png",
+    url: "https://www.charitywater.org/donate",
   },
 ];
 
@@ -66,41 +69,22 @@ export default function CharitiesPage() {
         <div className="mx-auto max-w-[1200px]">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-[26px] lg:grid-cols-3">
             {charities.map((charity) => (
-              <div
+              <a
                 key={charity.name}
-                className="relative overflow-hidden rounded-[6px]"
-                style={{
-                  height: "220px",
-                  backgroundColor: charity.bg ?? undefined,
-                  border: charity.border ? `1px solid ${charity.border}` : "none",
-                }}
+                href={charity.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Donate to ${charity.name}`}
+                className="relative block overflow-hidden rounded-[6px] bg-white transition-shadow hover:shadow-[0px_4px_12px_0px_rgba(0,0,0,0.1)]"
+                style={{ height: "220px", border: "1px solid #ddd" }}
               >
-                {charity.display === "cover" ? (
-                  <Image
-                    src={charity.logo}
-                    alt={charity.name}
-                    fill
-                    className="object-cover"
-                  />
-                ) : charity.display === "centered" ? (
-                  <div className="absolute inset-0 flex items-center justify-center px-[15%]">
-                    <Image
-                      src={charity.logo}
-                      alt={charity.name}
-                      width={270}
-                      height={270}
-                      className="h-auto w-full object-contain"
-                    />
-                  </div>
-                ) : (
-                  <Image
-                    src={charity.logo}
-                    alt={charity.name}
-                    fill
-                    className="object-contain"
-                  />
-                )}
-              </div>
+                <Image
+                  src={charity.logo}
+                  alt={charity.name}
+                  fill
+                  className="object-contain p-8"
+                />
+              </a>
             ))}
           </div>
         </div>

@@ -3,74 +3,155 @@
     {
       "id": "msg-001",
       "recipientRole": "Nurse",
-      "hospitalName": "Royal Victoria Hospital",
-      "city": "Belfast",
-      "body": "You held my hand when I was scared and made me feel like a person, not just a patient. Thank you from the bottom of my heart.",
+      "hospitalName": "St Mark's Hospital",
+      "city": "London",
+      "body": "You made me feel comfortable from the very second you called out my name from behind the curtain, right through to our last phone call. Your kindness, compassion and genuine care meant more to me than words can fully express. You always took the time to listen, reassure me, and make me feel like more than just another patient. During a very difficult period, your warmth and professionalism made a real difference to my life. The NHS and its patients are incredibly lucky to have such a kind, caring and dedicated nurse. Thank you for everything you have done. You are truly appreciated.",
       "fromLabel": "From a Patient",
-      "createdAt": "2026-05-06T14:32:00Z"
+      "createdAt": "2026-05-12T15:20:00Z"
     },
     {
       "id": "msg-002",
-      "recipientRole": "Doctor",
-      "hospitalName": "St Thomas' Hospital",
-      "city": "London",
-      "body": "Your calm reassurance during my diagnosis meant everything. You explained everything clearly and treated me with such dignity.",
-      "fromLabel": "From a Family Member",
-      "createdAt": "2026-05-05T09:15:00Z"
+      "recipientRole": "Nurse",
+      "hospitalName": "GenesisCare",
+      "city": "Penrith",
+      "body": "We missed you at the clinic last Friday for my final injection. I just want to thank you again with all my heart for giving us the reassurance and support we needed from day one, to help get us through this battle. Your kind, happy and positive attitude had a massive positive impact. You're a real life angel in my book.",
+      "fromLabel": "From a Patient",
+      "createdAt": "2026-05-12T11:05:00Z"
     },
     {
       "id": "msg-003",
-      "recipientRole": "Healthcare Assistant",
-      "hospitalName": "Manchester Royal Infirmary",
-      "city": "Manchester",
-      "body": "Every morning you greeted me with a smile. Your kindness made the long stay so much more bearable. I will never forget your warmth.",
+      "recipientRole": "Radiographer",
+      "hospitalName": "GenesisCare",
+      "city": "Penrith",
+      "body": "Last Friday was my final session for my cancer treatment. I came by your department to say hi but you'd already left for the day. I want to say a huge thank you to you personally for saving my life with your precision radiation therapy. Your clear instructions and expert guidance were invaluable and I'll never forget it. Your kind, funny and positive attitude was also priceless. I'm forever in your debt as I continue living my best life. All the best for the future.",
       "fromLabel": "From a Patient",
-      "createdAt": "2026-05-04T11:45:00Z"
+      "createdAt": "2026-05-12T10:40:00Z"
     },
     {
       "id": "msg-004",
-      "recipientRole": "Nurse",
-      "hospitalName": "Royal Melbourne Hospital",
-      "city": "Melbourne",
-      "body": "Through the hardest night of our lives you were there. Professional, compassionate, and genuinely caring. Our whole family thanks you.",
-      "fromLabel": "From a Family Member",
-      "createdAt": "2026-05-03T20:10:00Z"
+      "recipientRole": "Doctor",
+      "hospitalName": "St Mark's Hospital",
+      "city": "London",
+      "body": "Thank you for everything you've done for me, and thank you for believing me when no one else did. You've helped me gain a quality of life — to now be truly living rather than just existing. You saved me, and I can't thank this hospital enough. Everyone is so kind, caring and compassionate. There's none of the feeling that it's all in my head. Thank you for everything. Take care.",
+      "fromLabel": "From a Patient",
+      "createdAt": "2026-05-12T09:15:00Z"
     },
     {
       "id": "msg-005",
-      "recipientRole": "Pharmacist",
-      "hospitalName": "Western General Hospital",
-      "city": "Edinburgh",
-      "body": "You spotted a potential drug interaction that no one else had flagged. You may have saved my life. I cannot thank you enough.",
-      "fromLabel": "From a Patient",
-      "createdAt": "2026-05-02T16:55:00Z"
+      "recipientRole": "Nurse",
+      "hospitalName": "Royal Blackburn Teaching Hospital",
+      "city": "Blackburn",
+      "body": "I'd like to thank you for being so kind and thoughtful to our son during his time at the hospital. You would go out of your way to make him feel as comfortable as possible. He would usually hate it when nurses came in because he worried about his observations, but you managed to make him feel completely at ease. Thank you for making him feel so content and happy — and for making me and his dad feel so comfortable too, having a laugh with us when we needed it most. We appreciate all your hard work.",
+      "fromLabel": "From a Family Member",
+      "createdAt": "2026-04-23T13:30:00Z"
     },
     {
       "id": "msg-006",
-      "recipientRole": "Porter",
-      "hospitalName": "Leeds General Infirmary",
-      "city": "Leeds",
-      "body": "You always arrived with a joke and a kind word. Those short trips through the corridors were moments of light in a difficult time.",
-      "fromLabel": "From a Patient",
-      "createdAt": "2026-05-01T08:30:00Z"
+      "recipientRole": "Nurse",
+      "hospitalName": "North Manchester General Hospital",
+      "city": "Manchester",
+      "body": "I would like to say thank you for your support during my placement in the Outpatients Department. You were an approachable and encouraging mentor who made me feel welcome from the beginning. You took the time to explain things clearly and supported me to develop my confidence in practice. I learned so much from you — especially about communicating with patients and colleagues, working in a busy outpatient environment, and how the team works together to provide safe care. You were always patient, willing to answer my questions, and gave helpful feedback. Thank you for creating such a positive learning environment.",
+      "fromLabel": "From a Student Nurse",
+      "createdAt": "2026-04-13T10:00:00Z"
     },
     {
       "id": "msg-007",
-      "recipientRole": "Receptionist",
-      "hospitalName": "Mater Hospital",
-      "city": "Dublin",
-      "body": "When I arrived panicked and confused, you took the time to calm me down and guide me exactly where I needed to go. Thank you.",
+      "recipientRole": "Nurse",
+      "hospitalName": "North Manchester General Hospital",
+      "city": "Manchester",
+      "body": "Thank you for being so amazing. You treated me with so much care, respect and compassion at a very difficult and traumatic time for me and my husband. You were so kind and nothing was too much to ask — holding my hand while I was being examined, helping me get cleaned up and changed afterwards, all done with the utmost compassion and reassurance. It made all the difference when I was writhing in pain. You are a wonderful human being and you are just amazing at what you do. The NHS is great because of people like you.",
       "fromLabel": "From a Patient",
-      "createdAt": "2026-04-30T13:20:00Z"
+      "createdAt": "2026-04-08T18:45:00Z"
     },
     {
       "id": "msg-008",
-      "recipientRole": "Cleaner",
-      "hospitalName": "Royal Brisbane Hospital",
-      "city": "Brisbane",
-      "body": "You worked tirelessly and silently. A spotless environment matters so much to recovery. Your work truly makes a difference.",
+      "recipientRole": "Doctor",
+      "hospitalName": "St Mark's Hospital",
+      "city": "London",
+      "body": "I always believe that God sends angels, and he has sent me an incredibly beautiful one, with a heart of gold and so much patience. You were fantastic to me during my stay — every time you walked in I felt at ease. You always explained everything to me and kept my family updated, which is so hard to find these days. Thank you for all your time, kindness and help.",
       "fromLabel": "From a Patient",
-      "createdAt": "2026-04-29T10:05:00Z"
+      "createdAt": "2026-04-08T12:10:00Z"
+    },
+    {
+      "id": "msg-009",
+      "recipientRole": "Nurse",
+      "hospitalName": "St Mark's Hospital",
+      "city": "London",
+      "body": "Thank you very much for your exceptional care today in the discharge lounge. You treated not just my physical needs — you quickly realised my holistic needs with just a short conversation and went above and beyond to find information that could help me, going that extra mile. Keep doing what you do; patients really appreciate it. You make a difference. Please thank the whole team too — it has been a brilliant experience. This hospital has a reputation for a reason. Great team, fantastic nurses. Thank you very much indeed.",
+      "fromLabel": "From a Patient",
+      "createdAt": "2026-03-25T16:30:00Z"
+    },
+    {
+      "id": "msg-010",
+      "recipientRole": "Nurse",
+      "hospitalName": "St Mark's Hospital",
+      "city": "London",
+      "body": "I would like to express my sincere gratitude for the outstanding care I have received. The nurse who has been regularly supporting me with my intestinal pain management has been exceptional throughout my time here. Their approach is consistently kind, patient and reassuring. They are always willing to help, and nothing ever feels like too much trouble. This has made a significant difference to my experience, particularly during difficult periods of discomfort and uncertainty. They take the time to listen, respond promptly to concerns, and ensure my pain is managed as effectively as possible. Their professionalism and genuine compassion are deeply appreciated. Thank you for making a challenging time much more manageable.",
+      "fromLabel": "From a Patient",
+      "createdAt": "2026-03-22T14:50:00Z"
+    },
+    {
+      "id": "msg-011",
+      "recipientRole": "Midwife",
+      "hospitalName": "North Manchester General Hospital",
+      "city": "Manchester",
+      "body": "Thank you to the lovely midwife who started off my induction. I came down to the labour ward so anxious and full of worry, and you were able to calm me down and help me enjoy my birth experience as much as possible. You are such a kind, loving, caring midwife who made my son's birth so special. We all had a sing along to some 80s and had such an enjoyable experience. Thank you so much — we will always remember you.",
+      "fromLabel": "From a Patient",
+      "createdAt": "2026-03-22T11:25:00Z"
+    },
+    {
+      "id": "msg-012",
+      "recipientRole": "Midwife",
+      "hospitalName": "North Manchester General Hospital",
+      "city": "Manchester",
+      "body": "The amazing midwife who brought my beautiful son into the world. Your care, patience and understanding were absolutely perfect, and you delivered our son wonderfully. You will always be mentioned when I tell my birth story as the most kind, funny and calm midwife I have ever had across having three children. I knew this was my last ever baby, and my husband and I were so glad you helped him enter this world. Thank you for everything.",
+      "fromLabel": "From a Patient",
+      "createdAt": "2026-03-22T09:40:00Z"
+    },
+    {
+      "id": "msg-013",
+      "recipientRole": "Nurse",
+      "hospitalName": "Royal Blackburn Teaching Hospital",
+      "city": "Blackburn",
+      "body": "Thank you so much for looking after my son (and his yellow teddy). All of the staff who looked after him were absolutely fantastic, but you were the one who stood out. Your kindness and care made him feel at ease. He left with a big smile on his face and only remembers the fun bits instead of the scary ones, and that was all because of you. I hope you know how amazing you are at your job — he will certainly be telling everyone at school about you.",
+      "fromLabel": "From a Family Member",
+      "createdAt": "2026-03-19T17:05:00Z"
+    },
+    {
+      "id": "msg-014",
+      "recipientRole": "Doctor",
+      "hospitalName": "Sunshine Coast University Hospital",
+      "city": "Sunshine Coast",
+      "body": "You were the anaesthetist who looked after my son when he had surgery on his leg last month. Thank you so very much for looking after him the way you did. You are the kindest and most caring medical professional I have ever met — you don't know how much you helped us both. We hope we never need to come into surgery again, but if we do, we would only want to see your face in there. Thank you again.",
+      "fromLabel": "From a Family Member",
+      "createdAt": "2026-02-25T15:00:00Z"
+    },
+    {
+      "id": "msg-015",
+      "recipientRole": "Nurse",
+      "hospitalName": "North Manchester General Hospital",
+      "city": "Manchester",
+      "body": "You have been amazing! This is my second time on the ward in four weeks, and the care and compassion you have given me have been outstanding. You've made a very difficult time much more bearable and have helped me become more physically confident, as well as helping me get over irrational thoughts and concerns. You are a credit to the NHS. Thank you.",
+      "fromLabel": "From a Patient",
+      "createdAt": "2026-02-25T10:20:00Z"
+    },
+    {
+      "id": "msg-016",
+      "recipientRole": "Nurse",
+      "hospitalName": "St Mark's Hospital",
+      "city": "London",
+      "body": "You may remember me as an IBD patient who attended appointments every eight weeks, until my treatment plan changed so that I now take my medication from home. Since my last appointment, this is one thing I really missed about this hospital — seeing yourself and your team doing your amazing job. I have always praised every single one of your team for your dedication and excellent service in looking after patients. There is no other hospital in London that I know provides such an exceptional level of service. I'm still part of the clinic long-term and see my consultant every five to six months, and I will make every effort to come and see you and your team. I really hope you had a great start to the year — may you always keep good health and prosperity.",
+      "fromLabel": "From a Patient",
+      "createdAt": "2026-02-20T13:45:00Z"
+    },
+    {
+      "id": "msg-017",
+      "recipientRole": "Nurse",
+      "hospitalName": "The Grange University Hospital",
+      "city": "Cwmbran",
+      "body": "In these incredibly challenging days, when everything feels overwhelming, we have been blessed to meet someone whose kindness rises above every barrier. Despite language differences, you found a way to connect with my disabled brother — not through words alone, but through patience, gentleness and genuine care. You reached him in a way that made him feel safe, understood and valued during one of the hardest times of his life. We are deeply grateful for your compassion and dedication. Your ability to communicate beyond language and to bring comfort through your presence has meant more to us than you may ever realise. Thank you for your heart, your warmth, and the beautiful humanity you bring into your work every day.",
+      "fromLabel": "From a Family Member",
+      "createdAt": "2025-11-29T19:30:00Z"
     }
   ]
 }

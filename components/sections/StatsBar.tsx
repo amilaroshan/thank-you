@@ -1,8 +1,8 @@
 const stats = [
-  { value: "63+", label: "Hospitals" },
+  { value: "68+", label: "Hospitals" },
   { value: "402+", label: "Practices and Centres" },
-  { value: "170,780", label: "Clinical and Non-Clinical Staff" },
-  { value: "13,846,900", label: "Population Reach" },
+  { value: "178,780", label: "Clinical and Non-Clinical Staff" },
+  { value: "14,236,900", label: "Patient Reach" },
 ];
 
 export function StatsBar() {

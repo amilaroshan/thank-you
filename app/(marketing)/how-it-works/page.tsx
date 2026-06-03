@@ -14,15 +14,15 @@ const steps = [
     number: "01",
     title: "Scan a QR code",
     description: "Scan a QR code in your hospital or click here to search",
-    illustration: "/images/hiw-step1.svg",
-    illustrationWidth: 151,
-    illustrationHeight: 113,
+    illustration: "/images/qr.png",
+    illustrationWidth: 102,
+    illustrationHeight: 105,
     alt: "Hospital building illustration",
   },
   {
     number: "02",
     title: "Choose a staff member",
-    description: "Scroll through or search for the person you want to thank",
+    description: "Select a hospital, ward/dept, then scroll through or search for the person you want to thank",
     illustration: "/images/hiw-step2.svg",
     illustrationWidth: 125,
     illustrationHeight: 125,
@@ -31,7 +31,7 @@ const steps = [
   {
     number: "03",
     title: "Write your message",
-    description: "Your words will be delivered directly to the their mobile phone",
+    description: "Simply write your message, and your words will be delivered directly to the their mobile phone in real time",
     illustration: "/images/hiw-step3.svg",
     illustrationWidth: 141,
     illustrationHeight: 141,
@@ -57,7 +57,7 @@ export default function HowItWorksPage() {
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="flex w-full max-w-[239px] flex-col items-center gap-2 text-center"
+                className="flex w-full max-w-[260px] flex-col items-center gap-2 text-center"
               >
                 {/* Illustration */}
                 <div className="flex items-end justify-center h-[110px] sm:h-[141px]">
@@ -105,8 +105,8 @@ export default function HowItWorksPage() {
 
       {/* CTA Banner */}
       <ThankYouCallout
-        title="Have someone to thank?"
-        description="No account needed. It takes less than 2 minutes."
+        title="As patients, relatives, and colleagues, your words of appreciation make a real difference"
+        description="Safe and Secure.  No account needed. No registration required."
         buttonText="How to say Thank You"
         href="/say-thank-you"
       />

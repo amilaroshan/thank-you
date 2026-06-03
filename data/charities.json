@@ -2,45 +2,66 @@
   "charities": [
     {
       "id": "charity-001",
-      "name": "NHS Charities Together",
-      "logo": "/charities/nhs-charities-together.svg",
-      "bgColor": "#005EB8",
-      "url": "https://www.nhscharitiestogether.co.uk"
+      "name": "Shrewsbury and Telford Hospital Charity",
+      "logo": "/charity/1.jpg",
+      "bgColor": "#FFFFFF",
+      "url": "https://www.justgiving.com/page/sharegratitude-sathcharity"
     },
     {
       "id": "charity-002",
-      "name": "IPA World Health",
-      "logo": "/charities/ipa-world-health.svg",
+      "name": "Wishlist Charity",
+      "logo": "/charity/8.png",
       "bgColor": "#FFFFFF",
-      "url": "https://www.ipaworld.org"
+      "url": "https://www.wishlist.org.au/how-you-can-help/sharegratitude-donate"
     },
     {
       "id": "charity-003",
-      "name": "Marie Curie",
-      "logo": "/charities/marie-curie.svg",
-      "bgColor": "#FFD700",
-      "url": "https://www.mariecurie.org.uk"
+      "name": "Gore & Districts Health Incorporated",
+      "logo": "/charity/5.png",
+      "bgColor": "#FFFFFF",
+      "url": "https://www.justgiving.com/campaign/gorehealthsharegratitude"
     },
     {
       "id": "charity-004",
-      "name": "Macmillan Cancer Support",
-      "logo": "/charities/macmillan.svg",
-      "bgColor": "#00B140",
-      "url": "https://www.macmillan.org.uk"
+      "name": "Hospice UK",
+      "logo": "/charity/4.png",
+      "bgColor": "#FFFFFF",
+      "url": "https://www.justgiving.com/page/sharegratitudeforhospiceuk"
     },
     {
       "id": "charity-005",
-      "name": "British Red Cross",
-      "logo": "/charities/british-red-cross.svg",
+      "name": "St Mark's Hospital Foundation",
+      "logo": "/charity/3.png",
       "bgColor": "#FFFFFF",
-      "url": "https://www.redcross.org.uk"
+      "url": "https://www.justgiving.com/campaign/stmarkssharegratitude"
     },
     {
       "id": "charity-006",
-      "name": "Médecins Sans Frontières",
-      "logo": "/charities/msf.svg",
+      "name": "University Hospital Coventry & Warwickshire Charity",
+      "logo": "/charity/2.png",
       "bgColor": "#FFFFFF",
-      "url": "https://www.msf.org"
+      "url": "https://www.justgiving.com/uhcw"
+    },
+    {
+      "id": "charity-007",
+      "name": "St John Ambulance",
+      "logo": "/charity/9.png",
+      "bgColor": "#FFFFFF",
+      "url": "https://www.sja.org.uk/donate/"
+    },
+    {
+      "id": "charity-008",
+      "name": "Cancer Research UK",
+      "logo": "/charity/6.png",
+      "bgColor": "#FFFFFF",
+      "url": "https://www.cancerresearchuk.org/get-involved/donate"
+    },
+    {
+      "id": "charity-009",
+      "name": "Charity: Water",
+      "logo": "/charity/7.png",
+      "bgColor": "#FFFFFF",
+      "url": "https://www.charitywater.org/donate"
     }
   ]
 }

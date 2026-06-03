@@ -30,16 +30,14 @@ export default async function WhereWeArePage() {
 
       {/* Teal accent stripe — Figma Rectangle 17 */}
       <div
-        className="h-[39px] w-full"
-        style={{ backgroundColor: "#00CCCC" }}
+        className="w-full"
         aria-hidden="true"
       />
 
       {/* World map section */}
       <section
         aria-label="World map of ShareGratitude availability"
-        className="py-10 px-4"
-        style={{ backgroundColor: "rgba(0, 204, 204, 0.04)" }}
+        className="py-0 px-4 bg-[#F5FDFD]"
       >
         <div className="mx-auto max-w-[1200px]">
           <WorldMap countryStatuses={countryStatuses} />
