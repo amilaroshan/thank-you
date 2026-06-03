@@ -30,13 +30,13 @@ export function PageHero({ title, subtitle, bgImage = "/images/hero-bg.jpg" }: P
       {/* Content */}
       <div className="relative flex h-full flex-col items-center justify-center text-center px-4">
         <h1
-          className="font-bold tracking-[-0.96px] text-[22px] sm:text-[32px]"
+          className="font-bold tracking-[-0.96px] text-[22px] sm:text-[24px]"
           style={{ color: "#091f48" }}
         >
           {title}
         </h1>
         <p
-          className="font-medium max-w-[672px] text-sm sm:text-[16px]"
+          className="font-medium max-w-[672px] text-sm sm:text-[14px]"
           style={{ lineHeight: "20px", color: "#091f48" }}
         >
           {subtitle}

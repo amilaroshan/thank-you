@@ -55,14 +55,16 @@ export function MobileNav() {
             ))}
           </ul>
           <div className="mt-6">
-            <Link
-              href="/say-thank-you"
+            <a
+              href="https://web.humansofsharegratitude.com/?category=global"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="flex w-full items-center justify-center rounded-[6px] px-4 py-2.5 text-sm font-semibold text-navy transition-opacity hover:opacity-90"
               style={{ backgroundColor: "#00CCCC" }}
             >
               Say Thank You
-            </Link>
+            </a>
           </div>
         </nav>
       </SheetContent>
