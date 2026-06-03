@@ -108,7 +108,7 @@ export default function HowItWorksPage() {
         title="As patients, relatives, and colleagues, your words of appreciation make a real difference"
         description="Safe and Secure.  No account needed. No registration required."
         buttonText="How to say Thank You"
-        href="/say-thank-you"
+        href="https://web.humansofsharegratitude.com/?category=global"
       />
     </>
   );

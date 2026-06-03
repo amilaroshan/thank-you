@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { getMessages } from "@/lib/api";
 import { MessageCard } from "@/components/sections/MessageCard";
 
@@ -99,13 +98,15 @@ export default async function HomePage() {
               >
                 It takes less than 2 minutes.
               </p>
-              <Link
-                href="/say-thank-you"
+              <a
+                href="https://web.humansofsharegratitude.com/?category=global"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-3 inline-flex h-[40px] w-full lg:w-[279px] items-center justify-center rounded-[6px] bg-white font-semibold transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-white"
                 style={{ fontSize: "14px", color: "#091f48" }}
               >
                 How to say Thank You
-              </Link>
+              </a>
             </div>
           </div>
 
