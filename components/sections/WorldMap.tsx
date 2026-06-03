@@ -282,25 +282,25 @@ export function WorldMap({ countryStatuses }: Props) {
             )}
           </div>
         )}
-      </div>
 
-      {/* Legend — exact from Figma */}
-      <div className="flex items-center gap-3 sm:gap-6 justify-start pl-2 absolute">
-        <div className="flex items-center gap-2">
-          <span
-            className="inline-block h-[16px] w-[16px] rounded-full"
-            style={{ backgroundColor: "#00CCCC" }}
-            aria-hidden="true"
-          />
-          <span className="text-[14px]" style={{ color: "#091f48" }}>Available</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span
-            className="inline-block h-[16px] w-[16px] rounded-full"
-            style={{ backgroundColor: "#99EBEB" }}
-            aria-hidden="true"
-          />
-          <span className="text-[14px]" style={{ color: "#091f48" }}>Coming Soon</span>
+        {/* Legend — absolute, above the bottom of the map */}
+        <div className="absolute bottom-[8%] left-3 flex items-center gap-3 sm:gap-5">
+          <div className="flex items-center gap-1.5">
+            <span
+              className="inline-block h-3 w-3 sm:h-[14px] sm:w-[14px] rounded-full"
+              style={{ backgroundColor: "#00CCCC" }}
+              aria-hidden="true"
+            />
+            <span className="text-[11px] sm:text-[13px]" style={{ color: "#091f48" }}>Available</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <span
+              className="inline-block h-3 w-3 sm:h-[14px] sm:w-[14px] rounded-full"
+              style={{ backgroundColor: "#99EBEB" }}
+              aria-hidden="true"
+            />
+            <span className="text-[11px] sm:text-[13px]" style={{ color: "#091f48" }}>Coming Soon</span>
+          </div>
         </div>
       </div>
 

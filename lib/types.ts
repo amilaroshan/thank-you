@@ -2,7 +2,9 @@ export type Message = {
   id: string;
   recipientRole:
     | "Nurse"
+    | "Midwife"
     | "Doctor"
+    | "Radiographer"
     | "Healthcare Assistant"
     | "Porter"
     | "Cleaner"

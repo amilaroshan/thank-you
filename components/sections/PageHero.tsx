@@ -36,7 +36,7 @@ export function PageHero({ title, subtitle, bgImage = "/images/hero-bg.jpg" }: P
           {title}
         </h1>
         <p
-          className="mt-1 font-semibold max-w-[672px] text-sm sm:text-[16px]"
+          className="font-medium max-w-[672px] text-sm sm:text-[16px]"
           style={{ lineHeight: "20px", color: "#091f48" }}
         >
           {subtitle}

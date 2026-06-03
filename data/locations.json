@@ -3,9 +3,7 @@
     "GB": { "status": "available" },
     "AU": { "status": "available" },
     "US": { "status": "coming-soon" },
-    "IE": { "status": "coming-soon" },
-    "NZ": { "status": "coming-soon" },
-    "CA": { "status": "coming-soon" }
+    "NZ": { "status": "available" }
   },
   "stats": {
     "hospitals": 63,
