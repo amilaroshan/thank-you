@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,8 +21,13 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+function isActivePath(pathname: string, href: string): boolean {
+  return href === "/" ? pathname === "/" : pathname.startsWith(href);
+}
+
 export function MobileNav() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -41,18 +47,22 @@ export function MobileNav() {
         <SheetTitle className="sr-only">Navigation menu</SheetTitle>
         <nav aria-label="Mobile navigation" className="p-4">
           <ul className="mt-4 flex flex-col gap-1">
-            {navLinks.map(({ href, label }, i) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  onClick={() => setOpen(false)}
-                  className="block rounded-md px-3 py-2.5 text-base text-navy transition-colors hover:text-teal"
-                  style={{ fontWeight: i === 0 ? 600 : 400 }}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map(({ href, label }) => {
+              const active = isActivePath(pathname, href);
+              return (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    onClick={() => setOpen(false)}
+                    aria-current={active ? "page" : undefined}
+                    className="block rounded-md px-3 py-2.5 text-base text-navy transition-colors hover:text-teal"
+                    style={{ fontWeight: active ? 600 : 400 }}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
           <div className="mt-6">
             <a

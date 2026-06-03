@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { MobileNav } from "./MobileNav";
 
 const navLinks = [
@@ -11,7 +14,13 @@ const navLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
+function isActivePath(pathname: string, href: string): boolean {
+  return href === "/" ? pathname === "/" : pathname.startsWith(href);
+}
+
 export function Header() {
+  const pathname = usePathname();
+
   return (
     <header
       className="sticky top-0 z-50 bg-white border-b"
@@ -37,19 +46,23 @@ export function Header() {
         {/* Desktop nav */}
         <nav aria-label="Main navigation" className="hidden lg:block">
           <ul className="flex items-center gap-8">
-            {navLinks.map(({ href, label }, i) => (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className="text-[15px] text-navy hover:text-teal transition-colors focus-visible:outline-2 focus-visible:outline-teal focus-visible:rounded-sm"
-                  style={{
-                    fontWeight: i === 0 ? 600 : 400,
-                  }}
-                >
-                  {label}
-                </Link>
-              </li>
-            ))}
+            {navLinks.map(({ href, label }) => {
+              const active = isActivePath(pathname, href);
+              return (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    aria-current={active ? "page" : undefined}
+                    className="text-[15px] text-navy hover:text-teal transition-colors focus-visible:outline-2 focus-visible:outline-teal focus-visible:rounded-sm"
+                    style={{
+                      fontWeight: active ? 600 : 400,
+                    }}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
