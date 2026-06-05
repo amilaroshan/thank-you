@@ -7,22 +7,22 @@ type TeamMember = {
 };
 
 const TEAM: TeamMember[] = [
-  { name: "Naomi", region: "UK, Australia & NZ", image: "/images/team/naomi.jpg" },
-  { name: "Hon. A/Prof Sarah", region: "Australia", image: "/images/team/sarah.jpg" },
-  { name: "Dr/Mr Janindra", region: "UK, Australia & NZ", image: "/images/team/janindra.png" },
-  { name: "Don", region: "UK, Australia & NZ", image: "/images/team/don.jpg" },
-  { name: "Ross", region: "UK", image: "/images/team/ross.png" },
-  { name: "Chad", region: "UK, Australia & NZ", image: "/images/team/chad.png" },
-  { name: "Kokulan", region: "UK, Australia & NZ", image: "/images/team/kokulan.png" },
-  { name: "Samaya", region: "Australia", image: "/images/team/samaya.png" },
+  { name: "Naomi", region: "UK, AU, NZ, USA", image: "/images/team/naomi.jpg" },
+  { name: "Hon. A/Prof Sarah", region: "AU", image: "/images/team/sarah.jpg" },
+  { name: "Dr/Mr Janindra", region: "UK, AU, NZ", image: "/images/team/janindra.png" },
+  { name: "Don", region: "UK, AU, NZ, USA", image: "/images/team/don.jpg" },
+  { name: "Ross", region: "UK, EU, AU, USA", image: "/images/team/ross.png" },
+  { name: "Chad", region: "UK, AU, NZ", image: "/images/team/chad.png" },
+  { name: "Kokulan", region: "UK, AU, NZ", image: "/images/team/kokulan.png" },
+  { name: "Samaya", region: "AU", image: "/images/team/samaya.png" },
   { name: "Wineza", region: "Philippines", image: "/images/team/wineza.png" },
   { name: "John", region: "Kenya", image: "/images/team/john.png" },
   { name: "Amila", region: "Sri Lanka", image: "/images/team/amila.png" },
   { name: "Ahmad", region: "Indonesia", image: "/images/team/ahmad.png" },
-  { name: "Harshi", region: "UK, Australia & NZ", image: "/images/team/harshi.jpeg" },
+  { name: "Harshi", region: "UK, AU, NZ", image: "/images/team/harshi.jpeg" },
   { name: "Taka", region: "Japan", image: "/images/team/taka.png" },
-  { name: "Paul", region: "Australia & NZ", image: "/images/team/paul.jpeg" },
-  { name: "Nico", region: "Europe, UK & Australia", image: "/images/team/nico.jpg" },
+  { name: "Paul", region: "AU, NZ", image: "/images/team/paul.jpeg" },
+  { name: "Nico", region: "EU, UK, AU", image: "/images/team/nico.jpg" },
 ];
 
 export function TeamSection() {

@@ -14,28 +14,31 @@ const steps = [
   {
     number: "01",
     title: "Scan a QR code",
-    description: "Scan a QR code in your hospital or click here to search",
-    illustration: "/images/qr.png",
-    illustrationWidth: 102,
-    illustrationHeight: 105,
+    description: "Scan a local QR code or click a link provided by your hospital, clinic, or centre",
+    illustration: "/images/hiw-illustration-11.svg",
+    illustrationWidth: 150,
+    illustrationHeight: 123,
+    cssClass:"",
     alt: "Hospital building illustration",
   },
   {
     number: "02",
     title: "Choose a staff member",
-    description: "Select a hospital, ward/dept, then scroll through or search for the person you want to thank",
+    description: "Select a ward/dept, then scroll through or search for the person you want to thank",
     illustration: "/images/hiw-step2.svg",
     illustrationWidth: 125,
     illustrationHeight: 125,
+    cssClass:"",
     alt: "Doctor illustration",
   },
   {
     number: "03",
     title: "Write your message",
-    description: "Simply write your message, and your words will be delivered directly to the their mobile phone in real time",
+    description: "It will be delivered directly to the their mobile phone in real time",
     illustration: "/images/hiw-step3.svg",
     illustrationWidth: 125,
     illustrationHeight: 125,
+    cssClass:"transformed",
     alt: "Person on phone illustration",
   },
 ];
@@ -58,7 +61,7 @@ export default function HowItWorksPage() {
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="flex w-full max-w-[260px] flex-col items-center gap-2 text-center"
+                className="flex w-full max-w-[280px] flex-col items-center gap-2 text-center"
               >
                 {/* Illustration */}
                 <div className="flex items-end justify-center h-[110px] sm:h-[141px]">
@@ -67,7 +70,7 @@ export default function HowItWorksPage() {
                     alt={step.alt}
                     width={step.illustrationWidth}
                     height={step.illustrationHeight}
-                    className="h-auto max-h-full"
+                    className={`${step.cssClass} h-auto max-h-full`}
                   />
                 </div>
 

@@ -79,4 +79,34 @@
       transition-duration: 0.01ms !important;
     }
   }
+  .transformed{
+      transform: translate(-15px, 21px);
 }
+}
+
+/* Partner logo marquee */
+@keyframes partners-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+.partners-marquee {
+  display: flex;
+  width: max-content;
+  animation: partners-scroll var(--partners-duration, 75s) linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.group:hover .partners-marquee {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partners-marquee {
+    animation: none;
+    transform: none;
+  }
+}
+
+
