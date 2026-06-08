@@ -68,15 +68,15 @@ export function Header() {
 
         {/* CTA + mobile trigger */}
         <div className="flex items-center gap-3">
-          <a
+          <Link
             href="/how-it-works"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:inline-flex items-center justify-center rounded-[6px] px-[10px] h-[40px] w-[180px] text-[14px] font-semibold text-navy transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-teal"
+            className="hidden lg:inline-flex items-center justify-center rounded-[6px] px-[10px] h-[40px] text-[14px] font-semibold text-navy transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-teal"
             style={{ backgroundColor: "#00CCCC" }}
           >
-            How to say Thank You
-          </a>
+            How can I say Thank You?
+          </Link>
           <MobileNav />
         </div>
       </div>

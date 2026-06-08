@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getMessages } from "@/lib/api";
 import { MessageCard } from "@/components/sections/MessageCard";
 import { pageMetadata } from "@/lib/seo";
+import Link from "next/link";
 
 export const metadata = pageMetadata({
   title: "Community Messages",
@@ -45,7 +46,7 @@ export default async function HomePage() {
             <span className="font-semibold">
               Real thank-you messages delivered directly to healthcare staff :{" "}
             </span>
-            <span className="font-normal">100,000+ messages</span>
+            <span className="font-normal">30,000+ messages</span>
           </p>
         </div>
       </section>
@@ -91,7 +92,7 @@ export default async function HomePage() {
                 className="font-bold tracking-[-0.4px] leading-6 text-[18px] sm:text-[20px]"
                 style={{ color: "#091f48" }}
               >
-                Have someone to thank?
+                A simple way to Thank Staﬀ
               </p>
               <p
                 className="mt-1 text-sm sm:text-[14px]"
@@ -99,15 +100,15 @@ export default async function HomePage() {
               >
                 It takes less than 2 minutes.
               </p>
-              <a
+              <Link
                 href="/how-it-works"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex h-[40px] w-full lg:w-[279px] items-center justify-center rounded-[6px] bg-white font-semibold transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-white"
                 style={{ fontSize: "14px", color: "#091f48" }}
               >
-                How to say Thank You
-              </a>
+                How can I say Thank You?
+              </Link>
             </div>
           </div>
 
