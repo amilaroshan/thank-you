@@ -101,7 +101,7 @@ export default async function HomePage() {
                 It takes less than 2 minutes.
               </p>
               <Link
-                href="/how-it-works"
+                href="https://web.humansofsharegratitude.com/?category=global"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex h-[40px] w-full lg:w-[279px] items-center justify-center rounded-[6px] bg-white font-semibold transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-white"
