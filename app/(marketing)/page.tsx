@@ -63,17 +63,61 @@ export default async function HomePage() {
         >
           {/* Left sidebar */}
           <div className="flex flex-col gap-3 lg:shrink-0 lg:w-[328px]">
-            {/* Nurse photo — desktop only */}
+            {/* HUMAN programme card — desktop only */}
             <div
-              className="hidden lg:block relative overflow-hidden rounded-[6px]"
-              style={{ height: "354px" }}
+              className="hidden lg:flex relative flex-col overflow-hidden rounded-[6px] p-[22px] pb-4"
+              style={{ height: "380px" }}
             >
               <Image
-                src="/images/home-nurse.jpg"
-                alt="Healthcare worker"
+                src="/images/human-card-bg.jpg"
+                alt="Healthcare worker holding a phone"
                 fill
                 className="object-cover object-center"
               />
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.46) 60%, rgba(0, 0, 0, 0.8) 100%)",
+                }}
+                aria-hidden="true"
+              />
+              <div className="relative flex h-full flex-col">
+                <Image
+                  src="/images/human-logo.svg"
+                  alt="HUMAN by ShareGratitude"
+                  width={86}
+                  height={24}
+                  className="h-[24px] w-[100px]"
+                />
+                <div className="mt-auto flex flex-col">
+                  <h3
+                    className="font-semibold text-white text-[20px] tracking-[-0.4px]"
+                    style={{ lineHeight: "26px" }}
+                  >
+                    Our Healthcare Workers Are Extraordinarily HUMAN!
+                  </h3>
+                  <p className="mt-2 text-[14px] font-medium text-white">
+                    The Programme that helps Restore Psychological Safety and
+                    Meaning to Prevent Burnout and Retain Staff
+                  </p>
+                  <Link
+                    href="https://human.sharegratitude.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1 inline-flex items-center justify-end gap-1 text-[14px] font-medium transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-[#00cccc]"
+                    style={{ color: "#00cccc" }}
+                  >
+                    Learn More
+                    <Image
+                      src="/images/human-arrow.svg"
+                      alt=""
+                      width={20}
+                      height={20}
+                    />
+                  </Link>
+                </div>
+              </div>
             </div>
 
             {/* Teal callout card */}
@@ -81,13 +125,7 @@ export default async function HomePage() {
               className="relative flex flex-col items-center justify-center overflow-hidden rounded-[9px] px-6 pb-6 pt-6 text-center"
               style={{ backgroundColor: "#00CCCC" }}
             >
-              <Image
-                src="/images/heart-pin-vector.svg"
-                alt=""
-                width={19}
-                height={23}
-                className="mb-3"
-              />
+              
               <p
                 className="font-bold tracking-[-0.4px] leading-6 text-[18px] sm:text-[20px]"
                 style={{ color: "#091f48" }}
